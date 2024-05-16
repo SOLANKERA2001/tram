@@ -13,7 +13,7 @@ FROM ubuntu:20.04
 # OCI labels
 LABEL "org.opencontainers.image.title"="TRAM"
 LABEL "org.opencontainers.image.url"="https://ctid.mitre-engenuity.org/our-work/tram/"
-LABEL "custom.source"="C:/Users/solan/fyp/tram"
+LABEL "org.opencontainers.image.source"="https://github.com/SOLANKERA2001/tram"
 LABEL "org.opencontainers.image.description"="Threat Report ATT&CK Mapper"
 LABEL "org.opencontainers.image.license"="Apache-2.0"
 
@@ -94,8 +94,8 @@ COPY ./ .
 
 # install app dependencies
 RUN --mount=type=cache,target=/root/.cache \
-    python3 -m pip install -r ./requirements/requirements.txt && \
-    python3 -m pip install --editable . && \
+    python3 -m pip install -r requirements/requirements.txt && \
+    # python3 -m pip install --editable . && \
     cp -f ./docker/entrypoint.sh entrypoint.sh && \
     # Download NLTK data \
     # remove local bert model if it exists \
