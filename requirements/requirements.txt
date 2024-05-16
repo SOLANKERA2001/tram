@@ -1,0 +1,16 @@
+beautifulsoup4
+django-constance
+django-picklefield
+djangorestframework
+djangorestframework-simplejwt
+django
+faker
+gunicorn
+nltk
+pandas
+pdfplumber
+python-docx
+requests
+scikit-learn
+torch
+transformers[torch]
